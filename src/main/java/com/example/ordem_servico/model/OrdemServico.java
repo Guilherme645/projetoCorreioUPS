@@ -1,17 +1,8 @@
 package com.example.ordem_servico.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
 public class OrdemServico {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String numero;
     private String cliente;
     private String situacao;
@@ -33,6 +24,16 @@ public class OrdemServico {
     private String condicoes;
     private String defeitos;
     private String acessorios;
+    private String condicaoPagamento;
+    private String valorTotal;
+    private String nomeSituacao;
+
+    // Campos de pagamento
+    private String formaPagamentoId;
+    private String dataVencimento;
+    private int numeroParcelas;
+    private int intervaloDias;
+    private String valorPagamento;
 
     // Getters e Setters para todos os campos
 
@@ -202,5 +203,69 @@ public class OrdemServico {
 
     public void setAcessorios(String acessorios) {
         this.acessorios = acessorios;
+    }
+
+    public String getCondicaoPagamento() {
+        return condicaoPagamento;
+    }
+
+    public void setCondicaoPagamento(String condicaoPagamento) {
+        this.condicaoPagamento = condicaoPagamento;
+    }
+
+    public String getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(String valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public String getNomeSituacao() {
+        return nomeSituacao;
+    }
+
+    public void setNomeSituacao(String nomeSituacao) {
+        this.nomeSituacao = nomeSituacao;
+    }
+
+    public String getFormaPagamentoId() {
+        return formaPagamentoId;
+    }
+
+    public void setFormaPagamentoId(String formaPagamentoId) {
+        this.formaPagamentoId = formaPagamentoId;
+    }
+
+    public String getDataVencimento() {
+        return dataVencimento;
+    }
+
+    public void setDataVencimento(String dataVencimento) {
+        this.dataVencimento = dataVencimento;
+    }
+
+    public int getNumeroParcelas() {
+        return numeroParcelas;
+    }
+
+    public void setNumeroParcelas(int numeroParcelas) {
+        this.numeroParcelas = numeroParcelas;
+    }
+
+    public int getIntervaloDias() {
+        return intervaloDias;
+    }
+
+    public void setIntervaloDias(int intervaloDias) {
+        this.intervaloDias = intervaloDias;
+    }
+
+    public String getValorPagamento() {
+        return valorPagamento;
+    }
+
+    public void setValorPagamento(String valorPagamento) {
+        this.valorPagamento = valorPagamento;
     }
 }
